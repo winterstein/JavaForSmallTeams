@@ -22,6 +22,8 @@ Constructor dependency injection clearly communicates an object's dependencies i
 
 This is the only way in which dependencies should be injected.
 
+If the constructor becomes ungainly with too many dependencies, then consider using the builder pattern -- where a separate builder class collects together the dependencies, then makes the object. Guava frequently uses this pattern, for example its CacheBuilder and Cache classes.
+
 #### Setter Injection
 
 Setter injection increases the number of possible states an object could be in. Many of those states will be invalid.
